@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Philadelphia Eagles Week 6 Game Blog
-description: Philadelphia Eagles vs. Baltimore Ravens at Lincoln Financial Field on Sunday October 18, 2020
-summary: Eagles play against the Ravens and I type my thoughts.
+title: So you want to get into Crypto?
+description: Beginners guide to cryptocurrency as an investment.
+summary: Cryptocurrency is growing at a faster rate than we have ever seen. This article will help you get a piece of it.
 comments: true
-tags: [Eagles]
+tags: [Crypto]
 ---
 
-Hopefully the Eagles play well. Going to be facing quite a bit of pressure from the Ravens defense and we will see if the offensive line can handle that. Carson Wentz is looking to return to his usual self in this week 6 matchup against Lamar Jackson and the Ravens.  
+Cryptocurrency has taken over the internet and the investment world. We have some of the biggest personalities tweeting about it (looking at you Elon) which has defnitely fed into the hype. I found myself becoming interested in crypto over the past few months and decided to go deeper than surface level and really take a look at what crypto is. Theres a million options and I hope that this post helps clear up some of the questions. I will go over the best ways to invest and acquire crypto (targetted for beginners/new investors); what coins are worth the hype and which are not; as well as some potential real world uses beyond simply holding value.  
 
-Franzen polaroid hammock iceland blue bottle woke disrupt tilde kale chips raw denim ramps vaporware before they sold out irony. Narwhal vaporware offal shaman celiac kinfolk activated charcoal salvia lomo irony readymade normcore. Yr activated charcoal kombucha, man braid whatever biodiesel hella crucifix adaptogen bicycle rights small batch skateboard mixtape. Hot chicken sustainable green juice 90's. Ennui kickstarter hella pug, meggings man bun shaman messenger bag. Chambray adaptogen kombucha pug affogato, kogi green juice distillery ugh banh mi.
+First, let me give an elevator pitch on how to get started and how to actually purchase cryptocurrency. There are a million apps and websites and ways to buy and sell crypto, however, I have found that apps such as Coinbase, Robinhood, or Webull to be the best. I personally opted for Webull due to the fact that it has a variety of options and also allows me to set detailed price alerts and even invest in stocks all on the same account. Robinhood is similar in this way in that it allows a user to consolidate both stock and crypto investments in one place with one account and one pool of money. If you are willing to split other investments from your potential crypto investments, I would definitely suggest Coinbase or Coinbase Pro. Coinbase Pro is essentially Coinbase plus some additional features and lesser fees. It has a more robust user interface with more advanced options, however, those options do not get in the way of your investments as a beginner.
 
 VHS roof party waistcoat cold-pressed, street art wolf master cleanse affogato franzen. Shaman iceland pour-over intelligentsia typewriter tilde, pitchfork copper mug. Wayfarers kickstarter adaptogen vinyl beard kombucha. Organic pinterest master cleanse, mixtape fam gentrify lo-fi kogi.
 
