@@ -15,6 +15,35 @@
     min-height: 100vh;
     margin: 0;
 }
+.buttons-container {
+            display: flex;
+            justify-content: center;
+        }
+        /* Add styles for the buttons */
+        .page-button {
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            font-weight: bold;
+            margin: 0 5px; /* Add some space between buttons */
+        }
+        .page-button:hover {
+            opacity: 0.8;
+        }
+        /* Set colors for each button */
+        #restaurantButton {
+            background-color: #4CAF50;
+        }
+        #classesButton {
+            background-color: #f44336;
+        }
+        #teachersButton {
+            background-color: #2196F3;
+        }
+        #clubsButton {
+            background-color: #2196F3;
+        }
 .hidden {
     display: none;
 }
@@ -68,10 +97,11 @@
             <!-- Add your protected content here -->
             <h1 style="color: white; font-family: Roboto, Arial, sans-serif; font-size: 40px; text-align: center;">Campus Connect</h1>
             <p>
-        <button onclick="window.location.href='restaurant.html'">Restaurants</button>
-        <button onclick="window.location.href='classes.html'">Classes</button>
-        <button onclick="window.location.href='teachers.html'">Teachers</button>
-        <button onclick="window.location.href='clubs.html'">Clubs</button> 
+            <div class ="buttons-container">
+                <button id="restaurantButton" class="page-button" onclick="window.location.href='restaurant.html'">Restaurants</button>
+                <button id="classesButton" class="page-button" onclick="window.location.href='classes.html'">Classes</button>
+                <button id="teachersButton" class="page-button" onclick="window.location.href='teachers.html'">Teachers</button>
+                <button id="clubsButton" class="page-button" onclick="window.location.href='clubs.html'">Clubs</button> 
     </p>
         </div>
     </div>
