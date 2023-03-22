@@ -57,7 +57,13 @@
 
     <script>
         const correctPassword = "Elwood11"; // Replace with your desired password
-
+        
+        function navigateToOption() {
+    const selectedOption = document.getElementById('schoolOptions').value;
+    if (selectedOption) {
+        window.location.href = selectedOption;
+    }
+}
         function checkPassword() {
             const inputPassword = document.getElementById('passwordInput').value;
             if (inputPassword === correctPassword) {
