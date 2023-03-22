@@ -54,18 +54,16 @@
         <div id="protectedContent" class="hidden">
             <!-- Add your protected content here -->
             <h1>Welcome to the password-protected website!</h1>
-            <p><select id="schoolOptions" onchange="navigateToOption()">
-    <option value="" selected disabled>Select an option</option>
-    <option value="restaurant.html">Restaurants</option>
-    <option value="classes.html">Classes</option>
-    <option value="teachers.html">Teachers</option>
-</select>
-</p>
+            <p>
+        <button onclick="window.location.href='restaurant.html'">Restaurants</button>
+        <button onclick="window.location.href='classes.html'">Classes</button>
+        <button onclick="window.location.href='teachers.html'">Teachers</button>
+    </p>
         </div>
     </div>
 
     <script>
-        const correctPassword = "Elwood11"; // Replace with your desired password
+        const correctPassword = "test"; // Replace with your desired password
         
         function navigateToOption() {
     const selectedOption = document.getElementById('schoolOptions').value;
