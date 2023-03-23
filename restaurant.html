@@ -26,20 +26,29 @@
         .buttonContainer {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .majorButtons {
-            padding: 10px;
+            padding: 15px;
             cursor: pointer;
             border: white;
             color: seaGreen;
             font-weight: bold;
-            margin: 5px;
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        h2 {
+            font-family: Roboto, Arial, sans-serif;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div id="restaurants" class="tabcontent">
-        <h2 style="font-family: Roboto, Arial, sans-serif"; align-text: center;>Restaurants</h2>
+        <h2>Restaurants</h2>
         <div class="buttonContainer">
             <button class="majorButtons" onclick="window.location.href='https://www.rennieslanding.com/'">Rennies Landing</button>
             <button class="majorButtons" onclick="window.location.href='https://www.offthewaffle.com'">Off the Waffle</button>
@@ -53,4 +62,5 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
 
