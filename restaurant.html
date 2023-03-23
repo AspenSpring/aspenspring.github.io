@@ -22,21 +22,35 @@
         #restaurants {
             height: 100%;
         }
+
+        .buttonContainer {
+            display: flex;
+            justify-content: center;
+        }
+        .majorButtons {
+            padding: 10px;
+            cursor: pointer;
+            border: white;
+            color: seaGreen;
+            font-weight: bold;
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
     <div id="restaurants" class="tabcontent">
         <h2>Restaurants</h2>
-        <ul>
-            <li><a href="https://www.rennieslanding.com/">Rennies Landing</a></li>
-            <li><a href="https://www.offthewaffle.com">Off the Waffle</a></li>
-            <li><a href="https://www.chipotle.com">Chipotle</a></li>
-            <li><a href="https://www.maxseugene.com">Max's Tavern</a><li>
-            <li><a href="https://www.cafeyumm.com">Cafe' Yumm</a></li>
-            <li><a href="https://www.cornucopiaeugene.com">Cornucopia</a></li>
-            <li><a href="https://www.thebierstein.com">The Bier Stein</a></li>
-        </ul>
+        <div class="buttonContainer">
+            <button class="majorButtons" onclick="window.location.href='https://www.rennieslanding.com/'">Rennies Landing</button>
+            <button class="majorButtons" onclick="window.location.href='https://www.offthewaffle.com'">Off the Waffle</button>
+            <button class="majorButtons" onclick="window.location.href='https://www.chipotle.com'">Chipotle</button>
+            <button class="majorButtons" onclick="window.location.href='https://www.maxseugene.com'">Max's Tavern</button>
+            <button class="majorButtons" onclick="window.location.href='https://www.cafeyumm.com'">Cafe' Yumm</button>
+            <button class="majorButtons" onclick="window.location.href='https://www.cornucopiaeugene.com'">Cornucopia</button>
+            <button class="majorButtons" onclick="window.location.href='https://www.thebierstein.com'">The Bier Stein</button>
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>
 </html>
+
