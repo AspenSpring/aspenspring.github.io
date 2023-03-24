@@ -110,33 +110,23 @@
         </div>
         <div id="protectedContent" class="hidden">
             <div class="mission-statement">
-            <h2>Our Mission Statement</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-        </div>
-    </div>
-            <!-- Add your protected content here -->
+                <h2>Our Mission Statement</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
             <h1 style="color: white; font-family: Roboto, Arial, sans-serif; font-size: 40px; text-align: center;">Campus Connect</h1>
-            <p>
-            <div class ="buttons-container">
+            <div class="buttons-container">
                 <button id="restaurantButton" class="page-button" onclick="window.location.href='restaurant.html'">Restaurants</button>
                 <button id="classesButton" class="page-button" onclick="window.location.href='classes.html'">Classes</button>
                 <button id="teachersButton" class="page-button" onclick="window.location.href='teachers.html'">Teachers</button>
-                <button id="majorsButton" class="page-button" onclick="window.location.href='majors.html'">Majors</button> 
+                <button id="majorsButton" class="page-button" onclick="window.location.href='majors.html'">Majors</button>
                 <button id="greeklifeButton" class="page-button" onclick="window.location.href='greek_life.html'">Greek Life</button>
-        </div> <h1 style="color: white; font-family: Roboto, Arial, sans-serif; font-size: 40px; text-align: center;">Campus Connect</h1>
-            
-            <div class="buttons-container">
+            </div>
+        </div>
     </div>
 
     <script>
         const correctPassword = "test"; // Replace with your desired password
         
-        function navigateToOption() {
-    const selectedOption = document.getElementById('schoolOptions').value;
-    if (selectedOption) {
-        window.location.href = selectedOption;
-    }
-}
         function checkPassword() {
             const inputPassword = document.getElementById('passwordInput').value;
             if (inputPassword === correctPassword) {
