@@ -6,7 +6,6 @@
     <title>Page Title</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Add the background image rule for the html and body */
         html, body {
             background-image: url('Restaurantbackgroundimage.png');
             background-repeat: no-repeat;
@@ -18,33 +17,9 @@
             height: 100%;
         }
 
-        /* Set the height of the #restaurants div */
         #restaurants {
             height: 100%;
         }
-
-        .buttonContainer {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .majorButtons {
-    padding: 10px;
-    cursor: pointer;
-    border: 1px solid #A9A9A9;
-    color: seaGreen;
-    font-weight: bold;
-    margin: 5px;
-    font-size: 20px;
-    background-color: none; /* Add a white background */
-    transition: background-color 0.3s ease; /* Add transition for smooth color change */
-}
-
-    .majorButtons:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* Change the background color on hover */
-    color: seaGreen;
-}
-
 
         h2 {
             font-family: Roboto, Arial, sans-serif;
@@ -52,32 +27,139 @@
             font-size: 36px;
             margin-bottom: 20px;
         }
+
+        .buttonContainer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            position: relative;
+            display: inline-block;
+        }
+
+        .category button {
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #A9A9A9;
+            color: seaGreen;
+            font-weight: bold;
+            margin: 5px;
+            font-size: 20px;
+            background-color: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .category button:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: seaGreen;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .category:hover .dropdown {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div id="restaurants" class="tabcontent">
         <h2>Restaurants</h2>
         <div class="buttonContainer">
-            <button class="majorButtons" onclick="window.location.href='https://www.rennieslanding.com/'">Rennies Landing</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.offthewaffle.com'">Off the Waffle</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.chipotle.com'">Chipotle</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.maxseugene.com'">Max's Tavern</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.cafeyumm.com'">Cafe' Yumm</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.cornucopiaeugene.com'">Cornucopia</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.thebierstein.com'">The Bier Stein</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.agatealley.com//'">Tasty Thai Campus</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.boandvine.com//'">Bo & Vine Burger Bar</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.sweetbasilexpresstogo.com//'">Sweet Basil Express</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.Marcherestaurant.com//'">Marchè</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.littlebigburger.com//'">Little Big Burger</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.princepucklers.com//'">Prince Pucklers</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.beppeandgiannis.net//'">Beppe & Gianni's</button>
-            <button class="majorButtons" onclick="window.location.href='https://www.qdoba.com//'">Qdoba Mexican Grill</button>
-            
+            <div class="category">
+                <button>Burgers</button>
+                <div class="dropdown">
+                    <a href="https://www.maxseugene.com">Max's Tavern</a>
+                    <a href="https://www.boandvine.com">Bo & Vine Burger Bar</a>
+                    <a href="https://www.littlebigburger.com">Little Big Burger</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>Mexican</button>
+                <div class="dropdown">
+                    <a href="https://www.chipotle.com">Chipotle</a>
+                    <a href="https://www.qdoba.com">Qdoba Mexican Grill</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>Bars</button>
+                <div class="dropdown">
+                    <a href="https://www.rennieslanding.com">Rennies Landing</a>
+                                        <a href="https://www.thebierstein.com">The Bier Stein</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>Breakfast</button>
+                <div class="dropdown">
+                    <a href="https://www.offthewaffle.com">Off the Waffle</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>Healthy</button>
+                <div class="dropdown">
+                    <a href="https://www.cafeyumm.com">Cafe Yumm</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>Pub</button>
+                <div class="dropdown">
+                    <a href="https://www.cornucopiaeugene.com">Cornucopia</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>Thai</button>
+                <div class="dropdown">
+                    <a href="https://www.agatealley.com">Tasty Thai Campus</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>Asian</button>
+                <div class="dropdown">
+                    <a href="https://www.sweetbasilexpresstogo.com">Sweet Basil Express</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>French</button>
+                <div class="dropdown">
+                    <a href="https://www.Marcherestaurant.com">Marchè</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>Ice Cream</button>
+                <div class="dropdown">
+                    <a href="https://www.princepucklers.com">Prince Pucklers</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>Italian</button>
+                <div class="dropdown">
+                    <a href="https://www.beppeandgiannis.net">Beppe & Gianni's</a>
+                </div>
+            </div>
         </div>
     </div>
     <script src="scripts.js"></script>
 </body>
 </html>
+
 
 
