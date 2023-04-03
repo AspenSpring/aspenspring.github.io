@@ -6,19 +6,21 @@
     <title>Interactive Campus Map</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh; /* Change from 100% to 100vh */
+    }
 
-        #mapContainer {
-            width: 100%;
-            height: 100%;
-            min-height: 500px;
-        }
+    #mapContainer {
+        width: 100%;
+        height: calc(100vh - 40px); /* Subtract the height of the title */
+        position: absolute; /* Add position: absolute */
+        top: 40px; /* Add top: 40px */
+        left: 0;
+    }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt5RdgGRgUYL3yNAhwNNZI6HOC6_1lSek&callback=initMap" async defer></script>
 </head>
