@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Campus Map with Parking Spots</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #mapContainer {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt5RdgGRgUYL3yNAhwNNZI6HOC6_1lSek&callback=initMap" async defer></script>
+</head>
+<body>
+    <h1 style="text-align: center; margin-bottom: 20px; margin-top: 0;">Interactive Campus Map with Parking Spots</h1>
+    <div id="mapContainer"></div>
+    <script>
+        const parkingSpots = [
+          {
+            id: 1,
+            location: new google.maps.LatLng(44.045000, -123.070000),
+            available: true,
+            remainingTime: 0
+          },
+          {
+            id: 2,
+            location: new google.maps.LatLng(44.045200, -123.072000),
+            available: false,
+            remainingTime: 45 // in minutes
+          },
+          // More parking spots...
+        ];
+
+        function initMap() {
+            const uo = { lat: 44.044830, lng: -123.072606 };
+
+            const map = new google.maps.Map(document.getElementById('mapContainer'), {
+                zoom: 15,
+                center: uo,
+            });
+
+            displayParkingSpots();
+        }
+
+        function displayParkingSpots() {
+          parkingSpots.forEach(spot => {
+            const marker = new google.maps.Marker({
+              position: spot.location,
+              map: map,
+              title: 'Parking Spot ' + spot.id,
+              icon: spot.available ? 'http://maps.google.com/mapfiles/ms/icons/green-dot.png' : 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+            });
+
+            const infoWindow = new google.maps.InfoWindow({
+              content: `<div>
+                          <h3>Parking Spot ${spot.id}</h3>
+                          <p>${spot.available ? 'Available' : 'Occupied'}</p>
+                          ${!spot.available ? `<p>Time remaining: ${spot.remainingTime} minutes</p>` : ''}
+                        </div>`
+            });
+
+            marker.addListener('click', () => {
+              infoWindow.open(map, marker);
+            });
+          });
+        }
+    </script>
+</body>
+</html>
