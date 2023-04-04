@@ -57,7 +57,7 @@
         }
 
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt5RdgGRgUYL3yNAhwNNZI6HOC6_1lSek&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt5RdgGRgUYL3yNAhwNNZI6HOC6_1lSek&callback=initMap&libraries=places" async defer></script>
 </head>
 <body>
     <h1 style="text-align: center; margin-bottom: 20px; margin-top: 0;">Interactive Campus Map</h1>
@@ -67,10 +67,12 @@
     </div>
     <div id="mapContainer"></div>
     <script>
+        let map; // Declare the map variable here
+
         function initMap() {
             const uo = { lat: 44.044830, lng: -123.072606 };
 
-            const map = new google.maps.Map(document.getElementById('mapContainer'), {
+            map = new google.maps.Map(document.getElementById('mapContainer'), {
                 zoom: 15,
                 center: uo,
             });
@@ -96,7 +98,7 @@
                             title: place.name,
                         });
                     });
-                    map.fitBounds(bounds);
+                    map.fitBounds
                 } else {
                     alert('No results found');
                 }
