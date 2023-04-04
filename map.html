@@ -87,25 +87,30 @@
         }
 
         function search() {
-            const query = document.getElementById('searchBox').value;
-            const service = new google.maps.places.PlacesService(map);
-            service.textSearch({ query: query }, (results, status) => {
-                if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    const bounds = new google.maps.LatLngBounds();
-                                        results.forEach(place => {
-                        bounds.extend(place.geometry.location);
-                        new google.maps.Marker({
-                            position: place.geometry.location,
-                            map: map,
-                            title: place.name,
-                        });
-                    });
-                    map.fitBounds(bounds);
-                } else {
-                    alert('No results found');
-                }
+    const query = document.getElementById('searchBox').value;
+    const service = new google.maps.places.PlacesService(map);
+
+    // Add the location and radius parameters
+    const uo = new google.maps.LatLng(44.044830, -123.072606);
+    const radius = 6437; // About 4 miles in meters
+
+    service.textSearch({ query: query, location: uo, radius: radius }, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            const bounds = new google.maps.LatLngBounds();
+            results.forEach(place => {
+                bounds.extend(place.geometry.location);
+                new google.maps.Marker({
+                    position: place.geometry.location,
+                    map: map,
+                    title: place.name,
+                });
             });
+            map.fitBounds(bounds);
+        } else {
+            alert('No results found');
         }
+    });
+}
 
         // Add this function to calculate the walking time between two points
         function calculateWalkingTime(origin, destination) {
