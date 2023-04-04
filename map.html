@@ -66,6 +66,8 @@
         <button id="searchBtn" onclick="search()">Search</button>
     </div>
     <div id="mapContainer"></div>
+    <!-- Add a container for displaying the walking time -->
+    <div id="walkingTime" style="text-align: center; margin-top: 20px;"></div>
     <script>
         let map; // Declare the map variable here
 
@@ -90,7 +92,7 @@
             service.textSearch({ query: query }, (results, status) => {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
                     const bounds = new google.maps.LatLngBounds();
-                    results.forEach(place => {
+                                        results.forEach(place => {
                         bounds.extend(place.geometry.location);
                         new google.maps.Marker({
                             position: place.geometry.location,
@@ -98,12 +100,38 @@
                             title: place.name,
                         });
                     });
-                    map.fitBounds
+                    map.fitBounds(bounds);
                 } else {
                     alert('No results found');
                 }
             });
         }
+
+        // Add this function to calculate the walking time between two points
+        function calculateWalkingTime(origin, destination) {
+            const directionsService = new google.maps.DirectionsService();
+            const request = {
+                origin: origin,
+                destination: destination,
+                travelMode: 'WALKING'
+            };
+
+            directionsService.route(request, (result, status) => {
+                if (status === 'OK') {
+                    const walkingTime = result.routes[0].legs[0].duration.text;
+                    document.getElementById('walkingTime').innerText = 'Walking time: ' + walkingTime;
+                } else {
+                    document.getElementById('walkingTime').innerText = 'Error: ' + status;
+                }
+            });
+        }
+
+        // Example usage of the calculateWalkingTime function
+        // Replace the coordinates with the actual origin and destination points you want to use
+        const origin = new google.maps.LatLng(44.044830, -123.072606);
+        const destination = new google.maps.LatLng(44.050830, -123.070606);
+        calculateWalkingTime(origin, destination);
     </script>
 </body>
 </html>
+
