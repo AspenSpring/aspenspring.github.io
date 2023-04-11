@@ -108,6 +108,7 @@
         }
 
     </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt5RdgGRgUYL3yNAhwNNZI6HOC6_1lSek&libraries=places"></script>
 </head>
 <body>
     <div id="content">
@@ -115,6 +116,8 @@
             <h1 style="color: white; text-align: center;">Enter Password</h1>
             <input type="password" id="passwordInput" placeholder="Enter password...">
             <button id="submitBtn" onclick="checkPassword()">Submit</button>
+            <div style="text-align: center; margin-bottom: 20px;">
+            <input type="text" id="searchBox" placeholder="Search..." style="width: 300px; padding: 10px;">
         </div>
         <div id="protectedContent" class="hidden">
         <div class="mission-statement">
@@ -146,6 +149,10 @@
             } else {
                 alert('Incorrect password. Please try again.');
             }
+        }
+        function initAutocomplete() {
+            const searchBox = document.getElementById('searchBox');
+            const autocomplete = new google.maps.places.Autocomplete(searchBox);
         }
     </script>
 </body>
